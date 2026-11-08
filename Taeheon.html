@@ -1,3 +1,4 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1"><style>:root{color-scheme:light}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <!doctype html>
 <html lang="en" class="dark">
 <head>
@@ -467,8 +468,6 @@ const COHORTS = {
 };
 I.biz = '<svg class="biz-ic" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="6" y="6" width="12" height="12" rx="3"/></svg>';
 const projects = [
-  {t:"모두의 창업 1차", i:"fold"}, {t:"모두의 창업 2차", i:"fold"},
-  {t:"TIPS", i:"fold", kids:[ {t:"2026 RFPs", i:"fold", kids:rfps} ]},
   {t:"LIPS", i:"fold", kids:Object.keys(COHORTS).map(c => ({t:c, i:"fold", kids:COHORTS[c].map(n => ({t:n, i:"biz"}))}))},
 ];
 const match = (p, q) => !q || p.t.toLowerCase().includes(q) || (p.kids || []).some(k => match(k, q));
@@ -7432,3 +7431,5 @@ function mountMemo(host) {
 </script>
 </body>
 </html>
+
+</body></html>
