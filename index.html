@@ -387,18 +387,6 @@ html.dark .side .item.biz{padding-left:58px!important}
 /* 로고 줄을 위쪽에 밀착 (Claude 사이드바처럼) */
 .side,html.dark .side{padding-top:6px}
 .brand,html.dark .brand{padding-top:0;padding-bottom:12px;min-height:40px}
-
-/* 다크모드 공통 배경: 왼쪽 사이드바 색상으로 통일 */
-html.dark { --taeheon-surface: #1e1f20; }
-html.dark .side,
-html.dark .entry,
-html.dark .eh,
-html.dark .org,
-html.dark .dept .pcard,
-html.dark .team,
-html.dark .ctx {
-  background: var(--taeheon-surface);
-}
 </style>
 </head>
 <body>
@@ -2302,7 +2290,7 @@ $("#list").onclick = e => {
     /* 다크모드 카드: 테두리 없이 아주 살짝 밝은 배경 */
     .root.dark .verification-card {
       border-color: transparent;
-      background: #212125;
+      background: #1e1f20;
     }
 
     .root.dark .verification-card.is-document-selected {
@@ -2497,7 +2485,7 @@ $("#list").onclick = e => {
 
     .root.dark .company-bar {
       border-color: transparent;
-      background: #212125;
+      background: #1e1f20;
     }
 
     .cb-tabs { margin-top: 12px; }
@@ -2516,7 +2504,7 @@ $("#list").onclick = e => {
     .root.tab-overview .ov { display: grid; }
     .root.tab-overview .cb-placeholder { display: none; }
     .ov-card { padding: 18px 18px 16px; border: 1px solid #dcdcdc; border-radius: 8px; background: #fff; min-width: 0; }
-    .root.dark .ov-card { border-color: transparent; background: #212125; }
+    .root.dark .ov-card { border-color: transparent; background: #1e1f20; }
     .ov-span2 { grid-column: span 2; }
     .ov-card h3 { margin: 0 0 14px; font-size: 14px; font-weight: 600; color: #171717; display: flex; align-items: baseline; gap: 8px; }
     .ov-card h3 em { font-style: normal; font-weight: 400; font-size: 12px; color: #8b8b91; }
@@ -2706,12 +2694,12 @@ $("#list").onclick = e => {
     .fn-sheets button.on { background: #ececee; color: #171717; }
     .root.dark .fn-sheets button.on { background: #2c2d31; color: #fff; }
     .fn-seg { display: flex; padding: 3px; border-radius: 10px; background: #f0f0f0; }
-    .root.dark .fn-seg { background: #212125; }
+    .root.dark .fn-seg { background: #1e1f20; }
     .fn-seg button { height: 26px; border-radius: 7px; }
     .fn-seg button.on { background: #fff; color: #171717; }
     .root.dark .fn-seg button.on { background: #36373c; color: #fff; }
     .fn-wrap { overflow-x: auto; border-radius: 8px; background: #fff; border: 1px solid #dcdcdc; scrollbar-width: thin; }
-    .root.dark .fn-wrap { background: #212125; border-color: transparent; }
+    .root.dark .fn-wrap { background: #1e1f20; border-color: transparent; }
     .fn-table { border-collapse: separate; border-spacing: 0; width: max-content; min-width: 100%; font: 12.5px "Google Sans", Pretendard, sans-serif; font-variant-numeric: tabular-nums; }
     .fn-table th, .fn-table td { padding: 0 14px; height: 40px; text-align: right; white-space: nowrap; border-bottom: 1px solid #ececec; }
     .root.dark .fn-table th, .root.dark .fn-table td { border-bottom-color: #2c2d31; }
@@ -2723,7 +2711,7 @@ $("#list").onclick = e => {
       position: sticky; left: 0; z-index: 1; text-align: left; min-width: 230px;
       background: #fff; font-weight: 400;
     }
-    .root.dark .fn-table tbody th, .root.dark .fn-table thead th:first-child { background: #212125; }
+    .root.dark .fn-table tbody th, .root.dark .fn-table thead th:first-child { background: #1e1f20; }
     .fn-unit { display: table-cell; }
     .fn-unit > span:first-child { font-size: 11.5px; }
     .fn-hd { float: right; text-align: right; line-height: 1.5; }
@@ -3646,27 +3634,7 @@ $("#list").onclick = e => {
         scroll-behavior: auto !important;
       }
     }
-
-    /* 다크모드 공통 배경: Shadow DOM 내부도 사이드바와 동일하게 */
-    .root.dark { --background: #000; }
-    .root.dark .verification-card,
-    .root.dark .company-bar,
-    .root.dark .ov-card,
-    .root.dark .fn-wrap,
-    .root.dark .fn-seg,
-    .root.dark .fn-table tbody th,
-    .root.dark .fn-table thead th:first-child,
-    .root.dark .document-panel,
-    .root.dark .document-panel .panel-sidebar .panel-actions,
-    .root.dark .source-box,
-    .root.dark .ir-toc,
-    .root.dark .ir-scroll.multi,
-    .root.dark .mv-box,
-    .root.dark .ch,
-    .root.dark .ch-day span {
-      background: var(--taeheon-surface, #1e1f20);
-    }
-</style>
+  </style>
 <div class="root">
   <button
     class="menu-button"
