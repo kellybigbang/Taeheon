@@ -287,7 +287,9 @@ html.dark *::-webkit-scrollbar-thumb:hover{background:#55555b}
 
 
 /* ---------- 다크모드 사이드바: Gemini 사이드바와 동일한 UI ---------- */
-html.dark .side{background:#1e1f20;padding:14px 10px 12px}
+/* 사이드바는 문서 카드의 기본 배경색을 공유합니다. */
+html.dark{--taeheon-card-background:#1e1f20}
+html.dark .side{background:var(--taeheon-card-background, #1e1f20);padding:14px 10px 12px}
 html.dark .brand{padding:4px 8px 20px}
 html.dark .brand b{font-family:"Google Sans",Pretendard,Inter,system-ui,sans-serif;font-size:19px;font-weight:500;letter-spacing:-.01em;color:#e3e3e3}
 html.dark .brand button,html.dark .me .gear{width:36px;height:36px;border-radius:50%;color:#c4c7c5}
@@ -2290,7 +2292,7 @@ $("#list").onclick = e => {
     /* 다크모드 카드: 테두리 없이 아주 살짝 밝은 배경 */
     .root.dark .verification-card {
       border-color: transparent;
-      background: #1e1f20;
+      background: var(--taeheon-card-background, #1e1f20);
     }
 
     .root.dark .verification-card.is-document-selected {
