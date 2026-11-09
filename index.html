@@ -390,13 +390,7 @@ html.dark .side .item.biz{padding-left:58px!important}
 
 /* 다크모드 공통 배경: 왼쪽 사이드바 색상으로 통일 */
 html.dark { --taeheon-surface: #1e1f20; }
-html.dark body,
-html.dark .app,
 html.dark .side,
-html.dark .lips-frame,
-html.dark .tree,
-html.dark .top,
-html.dark .main,
 html.dark .entry,
 html.dark .eh,
 html.dark .org,
@@ -3654,9 +3648,7 @@ $("#list").onclick = e => {
     }
 
     /* 다크모드 공통 배경: Shadow DOM 내부도 사이드바와 동일하게 */
-    .root.dark { --background: var(--taeheon-surface, #1e1f20); }
-    .root.dark,
-    .root.dark .workspace,
+    .root.dark { --background: #000; }
     .root.dark .verification-card,
     .root.dark .company-bar,
     .root.dark .ov-card,
